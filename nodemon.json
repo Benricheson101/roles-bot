@@ -1,0 +1,17 @@
+{
+  "exitcrash": false,
+  "verbose": true,
+  "runOnChangeOnly": true,
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "./node_modules",
+    "./build",
+    "./test",
+    "*.log",
+    "*.vim"
+  ],
+  "ext": "js,ts,json,yaml,yml,toml",
+  "exec": "ts-node -r tsconfig-paths/register -r dotenv/config src/index.ts"
+}

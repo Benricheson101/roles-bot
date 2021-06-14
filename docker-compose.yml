@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  bot:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: 'production'
+
+  postgres:
+    command: 'postgres -c listen_addresses="*"'
+    image: 'postgres'
+    restart: 'always'
+    environment:
+      POSTGRES_PASSWORD: 'postgres'

@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  bot:
+    command: 'yarn run dev'
+    volumes:
+      - '.:/usr/src/app'
+    environment:
+      NODE_ENV: 'dev'
+
+  postgres:
+    logging:
+      driver: 'none'
